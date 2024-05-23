@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 15px;
+    
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#title {
+    flex-direction: column;
+    line-height: 10px;
+}
+
+.header h1 {
+    font-weight: 15px;
+}
+
+.menu {
+    background-color: #bccada;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.menu nav {
+    display: flex; /* Define um layout flexível */
+    justify-content: center; /* Alinha os itens horizontalmente no centro */
+}
+
+.menu nav a {
+    text-decoration: none; /* Remove sublinhado dos links */
+    margin: 10px 10px; /* Adiciona margem entre os links (altura e largura) */
+    color: #333; /* Define a cor do texto */
+}
+
+.menu nav li {
+    display: inline; /* Faz com que os itens da lista se comportem como elementos inline */
+    list-style: none; /* Remove os marcadores de lista */
+    margin: 20px;
+    color: #000; 
+    transition: background-color 0.3s ease;
+}
+
+.menu nav li:hover {
+    margin: 20px;
+    background-color: #d7dabc;
+}
+
+.container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.button-box {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #000cb3;
+}
+
+footer {
+    position: relative;
+    margin-bottom: 0;
+    clear: both;
+    border-top: 1px solid #000;
+}
+footer p {
+    margin: 10px 0 20px 0;
+    text-align: center;
+    font-size: 90%;
+}
+
+main {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+#capital {
+    width: 60%; /* Largura da caixa de seleção */
+    padding: 10px; /* Espaçamento interno */
+    font-size: 15px; /* Tamanho da fonte */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Cantos arredondados */
+    background-color: #f9f9f9; /* Cor de fundo */
+    color: #333; /* Cor do texto */
+    outline: none; /* Remover a borda de foco */
+    text-align: center;
+}
+
+/* Estilo para as opções da caixa de seleção */
+#capital option {
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 5px; /* Espaçamento interno */
+}
+
+fieldset {
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Cantos arredondados */
+    margin-top: 20px;
+}
+
+legend {
+    font-weight: bold; /* Texto em negrito */
+}
+
+label {
+    display: inline-block;
+    margin: 10px; /* Aumenta o espaço entre os checkboxes */
+    cursor: pointer;
+}
+
+.figura{
+    width: 50%; /* Define a largura como 60% da página */
+    height: 30%;
+    border: 2px solid #333; /* Adiciona uma borda de 2px sólida de cor cinza */
+    padding: 2px; /* Adiciona um preenchimento interno de 20 pixels */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+    border-radius: 10px; /* Adiciona um raio de borda de 10 pixels para cantos arredondados */
+    margin-left: 0px;
+}
