@@ -1,0 +1,2 @@
+Estacao	lat	lon
+SBRF	-8.13	-34.92

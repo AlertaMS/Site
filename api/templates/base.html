@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerta Meteorológico de Saúde</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <div id="title">
+            <h1>Alerta Meteorológico de Saúde</h1>
+        </div>
+    </header>
+    <div class="menu">    
+        <nav>
+            <a href="/"><li>Início</li></a>
+            <a href="#"><li>Sobre</li></a>
+            <a href="#"><li>Referências</li></a>
+            <a href="#"><li>Contato</li></a>
+        </nav>
+    </div>
+
+    {% block conteudo %}
+    {% endblock %}
+
+<footer>
+    <p id="copyright" class="copyright">
+        Projeto de Cultultura e Extensão
+    </p>
+</footer>
+</body>
+</html>

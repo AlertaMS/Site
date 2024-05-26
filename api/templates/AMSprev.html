@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+<main>
+    <form id="weatherForm" action="/AMSPrevisao" method="GET">
+        <select id="capital" name="capital">
+            <option value="" selected disabled hidden>Selecione uma Capital</option>
+            <option value="Manaus_AM">Manaus - AM</option>
+            <option value="Natal_RN">Natal - RN</option>
+            <option value="Porto Alegre_RS">Porto Alegre - RS</option>
+            <option value="Recife_PE">Recife - PE</option>
+            <option value="Salvador_BA">Salvador - BA</option>
+            <option value="São Luís_MA">São Luís - MA</option>
+            <option value="São Paulo_SP">São Paulo - SP</option>
+            <option value="Teresina_PI">Teresina - PI</option>
+        </select>
+
+        <fieldset>
+            <legend>Escolha os modelos de previsão:</legend>
+            
+            <label>
+                <input type="checkbox" name="model" value="ecmwf_cf">
+                <span>ECMWF CF</span>
+            </label>
+        
+            <label>
+                <input type="checkbox" name="model" value="ecmwf_fc">
+                <span>ECMWF FC</span>
+            </label>
+        
+            <label>
+                <input type="checkbox" name="model" value="GFS_thredds">
+                <span>GFS</span>
+            </label>
+        
+            <label>
+                <input type="checkbox" name="model" value="rjtd_cf">
+                <span>JMA</span>
+            </label>
+        
+            <label>
+                <input type="checkbox" name="model" value="dwd_fc">
+                <span>DWD</span>
+            </label>
+            <div class="info-container">
+                <span class="info-icon">ⓘ</span>
+                <div class="info-text">
+                    Informações sobre FC e CF
+                </div>
+            </div>
+        </fieldset>
+        
+        <button class="button" id="submitButton" type="submit">
+            Gerar Gráfico
+        </button>
+    </form>
+
+{% if modelos %}
+    {% if cidade %}
+    <h1>Resultado da Previsão</h1>
+    
+    <p>Cidade selecionada: {{ cidade }}</p>
+    <p>Modelos selecionados:</p>
+    <ul>
+        {% for modelo in modelos %}
+        <li>{{ modelo }}</li>
+        {% endfor %}
+    </ul>
+    <div class="figura">
+        {% include cidade+'.html' %}
+    </div>
+    {% else %}
+    <p>Nenhuma cidade selecionada.</p>
+    {% endif %}
+    {% else %}
+    <p>Nenhum modelo selecionado.</p>
+    {% endif %}
+</main>
+{% endblock %}
