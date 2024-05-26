@@ -17,7 +17,7 @@ def AMSprev():
 
     if cidade and modelos:
         
-        previsoes = gdf.get_raw_file_data(repo_url='https://github.com/AlertaMS/Previsao',pasta='previsao_2024-05-26',token='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')
+        previsoes = gdf.get_raw_file_data(repo_url='https://github.com/AlertaMS/Previsao',pasta='previsao_2024-05-26')
 
         gdf.plot_graf_temp(previsoes,cidade, modelos)
     return render_template('AMSprev.html',cidade=cidade,modelos=modelos)
